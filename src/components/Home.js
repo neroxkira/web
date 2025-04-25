@@ -134,7 +134,7 @@ const Home = () => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          <img src="/images/xiaoyan.jpg" alt="Hero Character" />
+          <img src="https://raw.githubusercontent.com/neroxkira/web/main/public/images/xiaoyan.jpg" alt="Hero Character" />
         </motion.div>
       </div>
     </motion.div>
