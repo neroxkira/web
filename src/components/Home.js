@@ -134,17 +134,17 @@ const Home = () => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-       <img
+        <img
           src="https://files.catbox.moe/htqw9r.jpg"
           alt="Hero Character"
           style={{
             width: '100%',
             maxWidth: '400px',
             height: 'auto',
-            display: 'block',
-            border: '2px solid lime'
+            display: 'block'
           }}
         />
+
 
         </motion.div>
       </div>
