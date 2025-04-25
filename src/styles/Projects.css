@@ -1,0 +1,314 @@
+.projects {
+  min-height: 100vh;
+  padding: 70px 2rem 4rem; /* Updated padding to account for navbar */
+  background: linear-gradient(135deg, #1a1a1a 0%, #2c3e50 100%);
+  color: white;
+}
+
+.projects-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.projects-header h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  margin-bottom: 1rem;
+  background: linear-gradient(45deg, #a8edea 0%, #fed6e3 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.projects-header p {
+  color: #8e8ea0;
+  font-size: 1.2rem;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.project-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.project-card.featured {
+  grid-column: 1 / -1;
+  background: linear-gradient(135deg, rgba(168, 237, 234, 0.1) 0%, rgba(254, 214, 227, 0.1) 100%);
+}
+
+.project-content {
+  padding: 2rem;
+}
+
+.project-info h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  background: linear-gradient(45deg, #a8edea 0%, #fed6e3 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.project-stats {
+  display: flex;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.stat {
+  text-align: center;
+}
+
+.stat-number {
+  display: block;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #a8edea;
+}
+
+.stat-label {
+  color: #8e8ea0;
+  font-size: 0.9rem;
+}
+
+.project-tags {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin: 1rem 0;
+}
+
+.tag {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+}
+
+.visit-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: linear-gradient(45deg, #a8edea, #fed6e3);
+  color: #2c3e50;
+  padding: 0.8rem 1.5rem;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 1.5rem;
+  transition: transform 0.2s ease;
+}
+
+.visit-btn:hover {
+  transform: translateX(5px);
+}
+
+.arrow-icon {
+  width: 20px;
+  height: 20px;
+  stroke: currentColor;
+  stroke-width: 2;
+  fill: none;
+}
+
+.project-links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.demo-link, .github-link {
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: opacity 0.2s ease;
+}
+
+.demo-link {
+  background: rgba(168, 237, 234, 0.2);
+  color: #a8edea;
+}
+
+.github-link {
+  background: rgba(254, 214, 227, 0.2);
+  color: #fed6e3;
+}
+
+.demo-link:hover, .github-link:hover {
+  opacity: 0.8;
+}
+
+.social-card {
+  position: relative;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+}
+
+.social-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top right, rgba(255,255,255,0.1), transparent 70%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.social-card:hover::before {
+  opacity: 1;
+}
+
+.social-icon {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.social-card:hover .social-icon {
+  transform: scale(1.1);
+}
+
+.social-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.github .social-icon {
+  color: #6e5494;
+}
+
+.instagram .social-icon {
+  color: #E4405F;
+}
+
+.whatsapp .social-icon {
+  color: #25D366;
+}
+
+.social-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1.5rem;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 1.5rem;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  position: relative;
+  z-index: 10;
+  border: none;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.social-btn:active {
+  transform: scale(0.98);
+}
+
+.github-btn {
+  background: linear-gradient(45deg, #6e5494, #7e64a4);
+  color: white;
+}
+
+.instagram-btn {
+  background: linear-gradient(45deg, #f09433, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888);
+  color: white;
+}
+
+.whatsapp-btn {
+  background: linear-gradient(45deg, #25D366, #128C7E);
+  color: white;
+}
+
+social-btn:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.1);
+}
+
+social-btn .arrow {
+  transition: transform 0.2s ease;
+}
+
+social-btn:hover .arrow {
+  transform: translateX(5px);
+}
+
+.music-website {
+  background: linear-gradient(135deg, rgba(168, 237, 234, 0.1) 0%, rgba(128, 0, 255, 0.1) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.music-preview {
+  margin-bottom: 1.5rem;
+}
+
+.music-icon {
+  width: 64px;
+  height: 64px;
+  color: #a8edea;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.primary-btn {
+  background: linear-gradient(45deg, #a8edea, #8000ff);
+  color: white;
+  font-weight: bold;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+}
+
+@media (max-width: 768px) {
+  .projects {
+    padding: 70px 1rem 2rem; /* Updated mobile padding */
+  }
+
+  .projects-grid {
+    gap: 1.5rem;
+  }
+
+  .project-card.featured {
+    margin: -1rem;
+    padding: 1rem;
+    border-radius: 0;
+  }
+
+  .project-stats {
+    gap: 1rem;
+  }
+
+  .stat-number {
+    font-size: 1.5rem;
+  }
+}
